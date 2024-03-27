@@ -26,24 +26,18 @@ public class Program {
 			System.out.println("Outsourced (y/n) ?");
 			char employeeType = scan.next().charAt(0);
 			scan.nextLine();
+			System.out.print("Name: ");
+			String name = scan.nextLine();
+			System.out.print("Hours: ");
+			int hours = scan.nextInt();
+			System.out.print("Value per Hour: ");
+			double valuePerHour = scan.nextDouble();
 			if (employeeType == 'y') {
-				System.out.print("Name: ");
-				String name = scan.nextLine();
-				System.out.print("Hours: ");
-				int hours = scan.nextInt();
-				System.out.print("Value per Hour: ");
-				double valuePerHour = scan.nextDouble();
 				System.out.print("Additional Change: ");
 				double additionalChange = scan.nextDouble();
 				Employee outEmployee = new OutsourcedEmployee(name, hours, valuePerHour, additionalChange);
 				employeeList.add(outEmployee);
 			} else if (employeeType == 'n') {
-				System.out.print("Name: ");
-				String name = scan.nextLine();
-				System.out.print("Hours: ");
-				int hours = scan.nextInt();
-				System.out.print("Value per Hour: ");
-				double valuePerHour = scan.nextDouble();
 				Employee Employee = new Employee(name, hours, valuePerHour);
 				employeeList.add(Employee);
 			} else {
